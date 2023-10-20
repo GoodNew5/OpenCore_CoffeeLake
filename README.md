@@ -3,9 +3,11 @@
 # HACKINTOSH DOCUMENTATION 👨🏻‍💻 ⌨️ 🍎 🖥️
 
 ℹ️ [MAIN GUIDE](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
+
 ℹ️ [DISCORD SUPPORT](https://discord.com/invite/2QYd7ZT)
 
 ❗️This guide does not explain installing mac os or creating a usb to do this, please refer to the relevant manual:
+
 💎 [Creating USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
 
 ## SPECS ⚙️
