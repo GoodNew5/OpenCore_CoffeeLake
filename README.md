@@ -1,6 +1,6 @@
 <!-- @format -->
 
-# HACKINTOSH DOCUMENTATION
+# HACKINTOSH DOCUMENTATION 👨🏻‍💻 ⌨️ 🍎 🖥️
 
 [DISCORD SUPPORT](https://discord.com/invite/2QYd7ZT) ℹ️
 
