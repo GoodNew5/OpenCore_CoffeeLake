@@ -2,7 +2,11 @@
 
 # HACKINTOSH DOCUMENTATION 👨🏻‍💻 ⌨️ 🍎 🖥️
 
-[DISCORD SUPPORT](https://discord.com/invite/2QYd7ZT) ℹ️
+ℹ️ [MAIN GUIDE](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
+ℹ️ [DISCORD SUPPORT](https://discord.com/invite/2QYd7ZT)
+
+❗️This guide does not explain installing mac os or creating a usb to do this, please refer to the relevant manual:
+💎 [Creating USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
 
 ## SPECS ⚙️
 
@@ -76,6 +80,8 @@ https://github.com/benbaker76/Hackintool
 
 IORegistryExplorer
 https://github.com/khronokernel/IORegistryClone/blob/master/ioreg-302.zip
+
+[Compiling and decompiling ACPI Tables](https://dortania.github.io/Getting-Started-With-ACPI/Manual/compile.html#compiling-and-decompiling-acpi-tables)
 
 ## KEXTS 📦
 
