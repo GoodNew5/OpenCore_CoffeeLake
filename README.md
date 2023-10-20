@@ -1,6 +1,6 @@
 <!-- @format -->
 
-# HACKINTOSH DOCUMENTATION 👨🏻‍💻 ⌨️ 🍎 🖥️
+# HACKINTOSH SETUP 👨🏻‍💻 ⌨️ 🍎 🖥️
 
 ℹ️ [MAIN GUIDE](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
 
