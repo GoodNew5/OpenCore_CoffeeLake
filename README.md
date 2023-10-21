@@ -6,13 +6,13 @@
 
 🔥 in this guide using OpenCore debug boilerplate, check out ⤵️
 
-ℹ️ [Debug boilerplate](https://github.com/acidanthera/OpenCorePkg/releases/)
+ℹ️ [DEBUG BOILERPLATE](https://github.com/acidanthera/OpenCorePkg/releases/)
 
 ℹ️ [DISCORD SUPPORT](https://discord.com/invite/2QYd7ZT)
 
 ❗️This guide does not explain installing mac os or creating a usb to do this, please refer to the relevant manual:
 
-💎 [Creating USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
+💎 [CREATING USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
 
 The file and folder structure looks something like this:
 
