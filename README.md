@@ -52,6 +52,7 @@ The file and folder structure looks something like this:
         └── ready SSDTs
 
 **EFI: base files for booting from USB**
+
 **SSDTs: experements and setup**
 
 ## SPECS ⚙️
