@@ -1,6 +1,6 @@
 <!-- @format -->
 
-# HACKINTOSH SETUP 👨🏻‍💻 ⌨️ 🍎 🖥️
+# HACKINTOSH DOCUMENTATION 👨🏻‍💻 ⌨️ 🍎 🖥️
 
 ℹ️ [MAIN GUIDE](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
 
@@ -9,6 +9,50 @@
 ❗️This guide does not explain installing mac os or creating a usb to do this, please refer to the relevant manual:
 
 💎 [Creating USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
+
+The file and folder structure looks something like this:
+
+    ├── EFI
+    │   ├── BOOT
+    │   └── OC
+    │       ├── ACPI
+    │       ├── Drivers
+    │       ├── Kexts
+    │       │   ├── IntelMausi.kext
+    │       │   │   └── Contents
+    │       │   │       └── MacOS
+    │       │   ├── Lilu.kext
+    │       │   │   └── Contents
+    │       │   │       └── MacOS
+    │       │   ├── NVMeFix.kext
+    │       │   │   └── Contents
+    │       │   │       └── MacOS
+    │       │   ├── UTBMap.kext
+    │       │   │   └── Contents
+    │       │   ├── VirtualSMC.kext
+    │       │   │   └── Contents
+    │       │   │       └── MacOS
+    │       │   └── WhateverGreen.kext
+    │       │       └── Contents
+    │       │           └── MacOS
+    │       ├── Resources
+    │       │   ├── Audio
+    │       │   ├── Font
+    │       │   ├── Image
+    │       │   └── Label
+    │       └── Tools
+    └── SSDTs
+        ├── SSDTTime  SSDTs
+        │   ├── SSDT-EC-USBX
+        │   ├── SSDT-PLUG
+        │   └── SSDT-PMC
+        ├── manual SSDTs
+        │   ├── edited
+        │   └── src
+        └── ready SSDTs
+
+**EFI: base files for booting from USB**
+**SSDTs: experements and setup**
 
 ## SPECS ⚙️
 
@@ -60,15 +104,17 @@
 - Execute Disable Bit
 - EHCI/XHCI Hand-off
 - OS type: Windows 8.1/10 UEFI Mode (some motherboards may require "Other OS" instead)
-- DVMT Pre-Allocated (iGPU Memory): 64MB or higher (для того чтобы в BIOS появилась настройка нужно откатить к оптимальным настройкам load optimized defaults после это перезагрузится и сделать internal graphic = enabled, перегрузиться и воуля)
+- DVMT Pre-Allocated (iGPU Memory): 64MB or higher \*
 - SATA Mode: AHCI
+
+**\*FYI** if DVMT Pre-Allocated (iGPU Memory) is not visible try to roll back to the optimal settings **load optimized defaults**, then reboot and set **internal graphic = enabled**, reboot and voila
 
 ## TOOLS 🔧
 
-Для работы с конфигом
+For work with **.plist** files
 https://github.com/corpnewt/ProperTree
 
-Для генерации SMBIOS
+SMBIOS
 https://github.com/corpnewt/GenSMBIOS
 
 Для сопоставления USB на Mac
