@@ -3,8 +3,11 @@
 # HACKINTOSH DOCUMENTATION 👨🏻‍💻 ⌨️ 🍎 🖥️
 
 ℹ️ [MAIN GUIDE](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
+
 🔥 in this guide using OpenCore debug boilerplate, check out ⤵️
+
 ℹ️ [Debug boilerplate](https://github.com/acidanthera/OpenCorePkg/releases/)
+
 ℹ️ [DISCORD SUPPORT](https://discord.com/invite/2QYd7ZT)
 
 ❗️This guide does not explain installing mac os or creating a usb to do this, please refer to the relevant manual:
