@@ -6,13 +6,14 @@
 
 🔥 in this guide using OpenCore debug boilerplate, check out ⤵️
 
-ℹ️ [DEBUG BOILERPLATE](https://github.com/acidanthera/OpenCorePkg/releases/)
+ℹ️ [Debug boilerplate](https://github.com/acidanthera/OpenCorePkg/releases/)
 
 ℹ️ [DISCORD SUPPORT](https://discord.com/invite/2QYd7ZT)
 
-❗️This guide does not explain installing mac os or creating a usb to do this, please refer to the relevant manual:
+❗️ After all the preparations, you may want to speed up loading and hide all messages for debugging, for this refer to this [guide](https://dortania.github.io/OpenCore-Post-Install/cosmetic/verbose.html#macos-decluttering)
 
-💎 [CREATING USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
+❗️This guide does not explain installing mac os or creating a usb to do this, please refer to the relevant manual:
+💎 [Creating USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
 
 The file and folder structure looks something like this:
 
@@ -29,6 +30,9 @@ The file and folder structure looks something like this:
     │       │   │   └── Contents
     │       │   │       └── MacOS
     │       │   ├── NVMeFix.kext
+    │       │   │   └── Contents
+    │       │   │       └── MacOS
+    │       │   ├── USBToolBox.kext
     │       │   │   └── Contents
     │       │   │       └── MacOS
     │       │   ├── UTBMap.kext
@@ -157,8 +161,6 @@ https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0
 **SENSORS / TEMPERATURE**
 https://github.com/Acidanthera/VirtualSMC/releases/tag/1.3.2
 
-- ReadeonSensor.kext
-- SMCRadeonGPU.kext
 - SMCProcessor.kext
 - SMCSuperIO.kext
 
