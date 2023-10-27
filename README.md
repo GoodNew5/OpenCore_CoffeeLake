@@ -29,9 +29,6 @@ The file and folder structure looks something like this:
     │       │   ├── Lilu.kext
     │       │   │   └── Contents
     │       │   │       └── MacOS
-    │       │   ├── NVMeFix.kext
-    │       │   │   └── Contents
-    │       │   │       └── MacOS
     │       │   ├── USBToolBox.kext
     │       │   │   └── Contents
     │       │   │       └── MacOS
