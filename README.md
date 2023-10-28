@@ -28,7 +28,7 @@ https://www.easyuefi.com/index-us.html
 ❗️ Requirements:
 
 - Ventura 13.6 and newer
-- BIOS F11
+- BIOS VERISON F11
 
 ## FOLDER STRUCTURE 📂
 
