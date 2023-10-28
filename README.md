@@ -192,10 +192,10 @@ https://github.com/Acidanthera/VirtualSMC/releases/tag/1.3.2
 
 ## APPLICATIONS 👨🏻‍💻
 
-**TEMPERATURE dGPU**
+**TEMPERATURE dGPU:**
 https://github.com/ChefKissInc/RadeonSensor
 
-**WIFI**
+**WIFI:**
 https://github.com/OpenIntelWireless/HeliPort/releases
 
-**MONITOR CONTROL** https://github.com/MonitorControl/MonitorControl/releases
+**MONITOR CONTROL:** https://github.com/MonitorControl/MonitorControl/releases
