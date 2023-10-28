@@ -1,6 +1,6 @@
 <!-- @format -->
 
-# HACKINTOSH DOCUMENTATION 👨🏻‍💻 ⌨️ 🍎 🖥️
+# HACKINTOSH GUIDE 👨🏻‍💻 ⌨️ 🍎 🖥️
 
 ℹ️ [MAIN GUIDE](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
 
@@ -12,10 +12,27 @@
 
 ❗️ After all the preparations, you may want to speed up loading and hide all messages for debugging, for this refer to this [guide](https://dortania.github.io/OpenCore-Post-Install/cosmetic/verbose.html#macos-decluttering)
 
-❗️This guide does not explain installing mac os or creating a usb to do this, please refer to the relevant manual:
+❗️ This guide does not explain installing mac os or creating a usb to do this, please refer to the relevant manual:
 💎 [Creating USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
 
-The file and folder structure looks something like this:
+❗️ After installation, make sure you have completed everything in this guide.
+https://dortania.github.io/OpenCore-Post-Install
+
+❗️ If there are problems with the bootloader for example you have Windows on a separate disk as some BIOSes tend to prevent booting from it if they detect EFI/Microsoft/Boot/bootmgfw.efi I would advise making a custom entry in your BIOS that points directly to EFI/OC/OpenCore.efi. I'm suspecting your BIOS is blocking access to EFI/BOOT/BOOTx64.EFI due to EFI/Microsoft/Boot/bootmgfw.efi being found. To do this you can use
+https://www.easyuefi.com/index-us.html
+
+    It might look like this ⤵️
+
+![Alt text](./screenshots/EasyUEFI.png)
+
+❗️ Requirements:
+
+- Ventura 13.6 and newer
+- BIOS F11
+
+## FOLDER STRUCTURE 📂
+
+The file and folder structure looks something like this ⤵️
 
     ├── EFI
     │   ├── BOOT
@@ -46,15 +63,16 @@ The file and folder structure looks something like this:
     │       │   ├── Image
     │       │   └── Label
     │       └── Tools
-    └── SSDTs
-        ├── SSDTTime  SSDTs
-        │   ├── SSDT-EC-USBX
-        │   ├── SSDT-PLUG
-        │   └── SSDT-PMC
-        ├── manual SSDTs
-        │   ├── edited
-        │   └── src
-        └── ready SSDTs
+    ├── SSDTs
+    │   ├── SSDTTime  SSDTs
+    │   │   ├── SSDT-EC-USBX
+    │   │   ├── SSDT-PLUG
+    │   │   └── SSDT-PMC
+    │   ├── manual SSDTs
+    │   │   ├── edited
+    │   │   └── src
+    │   └── ready SSDTs
+    └── screenshots
 
 **EFI: base files for booting from USB**
 
@@ -74,6 +92,17 @@ The file and folder structure looks something like this:
 - ARCH: **Coffee Lake SOCKET: 1151 LGA**
 - INTERNAL GRAPHICS CARD: **UHD 630**
 
+**GRAPHIC:**
+
+- NAME: **AMD Radeon RX 580**
+- MEMORY SIZE: **8GB**
+
+**STORAGE:**
+
+- NAME: **Samsung SSD 970 EVO 1TB**
+- TYPE: **NVMe**
+- MEMORY SIZE: **1TB**
+
 **NETWORK:**
 
 - MAC address: **B4:2E:99:FB:0B:B1**
@@ -81,10 +110,10 @@ The file and folder structure looks something like this:
 
 **APPLE:**
 
-- Type: iMac19,1 Serial: **C02C10FKJV3Q**
-- Board Serial: **C02953310QXLNV9JC**
-- SmUUID: **BAB10EE3-7D31-436F-B636-641F22E0E132**
-- Apple ROM: **C42C0358819B**
+- TYPE: iMac19,1 Serial: **C02C10FKJV3Q**
+- BOARD SERIAL: **C02953310QXLNV9JC**
+- SMUUID: **BAB10EE3-7D31-436F-B636-641F22E0E132**
+- APPLE ROM: **C42C0358819B**
 
 ## BIOS SETTINGS ⌨️
 
@@ -123,10 +152,10 @@ https://github.com/corpnewt/ProperTree
 SMBIOS
 https://github.com/corpnewt/GenSMBIOS
 
-Для сопоставления USB на Mac
+USB mapping on Mac
 https://github.com/corpnewt/USBMap
 
-Для сопоставления на Windows (Лучший вариант)
+USB mapping on Windows (better option)
 https://github.com/USBToolBox/tool
 
 Hackintool
@@ -168,3 +197,5 @@ https://github.com/ChefKissInc/RadeonSensor
 
 **WIFI**
 https://github.com/OpenIntelWireless/HeliPort/releases
+
+**MONITOR CONTROL** https://github.com/MonitorControl/MonitorControl/releases
