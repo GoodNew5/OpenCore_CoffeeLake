@@ -106,7 +106,8 @@ The file and folder structure looks something like this ⤵️
 **CPU:**
 
 - NAME: **Intel Core i7 9700K**
-- ARCH: **Coffee Lake SOCKET: 1151 LGA**
+- ARCH: **Coffee Lake**
+- SOCKET: **1151 LGA**
 - INTERNAL GRAPHICS CARD: **UHD 630**
 
 **GRAPHIC:**
