@@ -36,43 +36,60 @@ The file and folder structure looks something like this ⤵️
 
     ├── EFI
     │   ├── BOOT
+    │   │   └── BOOTx64.efi
     │   └── OC
     │       ├── ACPI
+    │       │   ├── SSDT-EC.aml
+    │       │   ├── SSDT-PLUG.aml
+    │       │   ├── SSDT-PMC.aml
+    │       │   └── SSDT-USBX.aml
     │       ├── Drivers
+    │       │   ├── HfsPlus.efi
+    │       │   ├── OpenRuntime.efi
+    │       │   └── ResetNvramEntry.efi
     │       ├── Kexts
     │       │   ├── IntelMausi.kext
     │       │   │   └── Contents
+    │       │   │       ├── Info.plist
     │       │   │       └── MacOS
+    │       │   │           └── IntelMausi
     │       │   ├── Lilu.kext
     │       │   │   └── Contents
+    │       │   │       ├── Info.plist
     │       │   │       └── MacOS
+    │       │   │           └── Lilu
     │       │   ├── USBToolBox.kext
     │       │   │   └── Contents
+    │       │   │       ├── Info.plist
     │       │   │       └── MacOS
+    │       │   │           └── USBToolBox
     │       │   ├── UTBMap.kext
     │       │   │   └── Contents
+    │       │   │       └── Info.plist
     │       │   ├── VirtualSMC.kext
     │       │   │   └── Contents
+    │       │   │       ├── Info.plist
     │       │   │       └── MacOS
+    │       │   │           └── VirtualSMC
     │       │   └── WhateverGreen.kext
     │       │       └── Contents
+    │       │           ├── Info.plist
     │       │           └── MacOS
+    │       │               └── WhateverGreen
+    │       ├── OpenCore.efi
     │       ├── Resources
     │       │   ├── Audio
     │       │   ├── Font
     │       │   ├── Image
     │       │   └── Label
-    │       └── Tools
+    │       ├── Tools
+    │       │   └── OpenShell.efi
+    │       └── config.plist
+    ├── README.md
     ├── SSDTs
-    │   ├── SSDTTime  SSDTs
-    │   │   ├── SSDT-EC-USBX
-    │   │   ├── SSDT-PLUG
-    │   │   └── SSDT-PMC
-    │   ├── manual SSDTs
-    │   │   ├── edited
-    │   │   └── src
-    │   └── ready SSDTs
+    │   ├──...
     └── screenshots
+        └──...
 
 **EFI: base files for booting from USB**
 
