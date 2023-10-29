@@ -1,3 +1,0 @@
-Отредактированные файлы в соответствии с https://dortania.github.io/OpenCore-Install-Guide/ktext.html#desktop
-
-SSDT-EC-USBX.dsl – нужно сгенерировать системой
