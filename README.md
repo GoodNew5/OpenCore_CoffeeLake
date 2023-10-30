@@ -27,69 +27,99 @@ https://www.easyuefi.com/index-us.html
 
 ❗️ Requirements:
 
-- Ventura 13.6 and newer
-- BIOS VERISON F11
+- BIOS VERSION F11
+- OpenCore-0.9.5-DEBUG
+- Ventura 13.6
 
 ## FOLDER STRUCTURE 📂
 
 The file and folder structure looks something like this ⤵️
 
-    ├── EFI
-    │   ├── BOOT
-    │   │   └── BOOTx64.efi
-    │   └── OC
-    │       ├── ACPI
-    │       │   ├── SSDT-EC.aml
-    │       │   ├── SSDT-PLUG.aml
-    │       │   ├── SSDT-PMC.aml
-    │       │   └── SSDT-USBX.aml
-    │       ├── Drivers
-    │       │   ├── HfsPlus.efi
-    │       │   ├── OpenRuntime.efi
-    │       │   └── ResetNvramEntry.efi
-    │       ├── Kexts
-    │       │   ├── IntelMausi.kext
-    │       │   │   └── Contents
-    │       │   │       ├── Info.plist
-    │       │   │       └── MacOS
-    │       │   │           └── IntelMausi
-    │       │   ├── Lilu.kext
-    │       │   │   └── Contents
-    │       │   │       ├── Info.plist
-    │       │   │       └── MacOS
-    │       │   │           └── Lilu
-    │       │   ├── USBToolBox.kext
-    │       │   │   └── Contents
-    │       │   │       ├── Info.plist
-    │       │   │       └── MacOS
-    │       │   │           └── USBToolBox
-    │       │   ├── UTBMap.kext
-    │       │   │   └── Contents
-    │       │   │       └── Info.plist
-    │       │   ├── VirtualSMC.kext
-    │       │   │   └── Contents
-    │       │   │       ├── Info.plist
-    │       │   │       └── MacOS
-    │       │   │           └── VirtualSMC
-    │       │   └── WhateverGreen.kext
-    │       │       └── Contents
-    │       │           ├── Info.plist
-    │       │           └── MacOS
-    │       │               └── WhateverGreen
-    │       ├── OpenCore.efi
-    │       ├── Resources
-    │       │   ├── Audio
-    │       │   ├── Font
-    │       │   ├── Image
-    │       │   └── Label
-    │       ├── Tools
-    │       │   └── OpenShell.efi
-    │       └── config.plist
+    ├── PC
     ├── README.md
     ├── SSDTs
-    │   ├──...
+    │   ├── SSDTTime  SSDTs (compiled)
+    │   │   ├── SSDT-EC-USBX
+    │   │   │   ├── DSDT.aml
+    │   │   │   ├── SSDT-EC.aml
+    │   │   │   ├── SSDT-EC.dsl
+    │   │   │   ├── patches_Clover.plist
+    │   │   │   └── patches_OC.plist
+    │   │   ├── SSDT-PLUG
+    │   │   │   ├── DSDT.aml
+    │   │   │   ├── SSDT-PLUG.aml
+    │   │   │   ├── SSDT-PLUG.dsl
+    │   │   │   ├── patches_Clover.plist
+    │   │   │   └── patches_OC.plist
+    │   │   └── SSDT-PMC
+    │   │       ├── DSDT.aml
+    │   │       ├── SSDT-PMC.aml
+    │   │       ├── SSDT-PMC.dsl
+    │   │       ├── patches_Clover.plist
+    │   │       └── patches_OC.plist
+    │   ├── compiled
+    │   │   └── SSDT-SBUS-MCHC.aml
+    │   └── manual SSDTs
+    │       ├── edited
+    │       │   ├── SSDT-EC-USBX.dsl
+    │       │   ├── SSDT-PLUG.dsl
+    │       │   ├── SSDT-PMC.dsl
+    │       │   └── SSDT-SBUS-MCHC.dsl
+    │       └── src
+    │           └── SYSTEM.aml
+    ├── USB
+    │   └── EFI
+    │       ├── BOOT
+    │       │   └── BOOTx64.efi
+    │       └── OC
+    │           ├── ACPI
+    │           │   ├── SSDT-EC.aml
+    │           │   ├── SSDT-PMC.aml
+    │           │   └── SSDT-USBX.aml
+    │           ├── Drivers
+    │           │   ├── HfsPlus.efi
+    │           │   ├── OpenRuntime.efi
+    │           │   └── ResetNvramEntry.efi
+    │           ├── Kexts
+    │           │   ├── IntelMausi.kext
+    │           │   │   └── Contents
+    │           │   │       ├── Info.plist
+    │           │   │       └── MacOS
+    │           │   │           └── IntelMausi
+    │           │   ├── Lilu.kext
+    │           │   │   └── Contents
+    │           │   │       ├── Info.plist
+    │           │   │       └── MacOS
+    │           │   │           └── Lilu
+    │           │   ├── USBToolBox.kext
+    │           │   │   └── Contents
+    │           │   │       ├── Info.plist
+    │           │   │       └── MacOS
+    │           │   │           └── USBToolBox
+    │           │   ├── UTBMap.kext
+    │           │   │   └── Contents
+    │           │   │       └── Info.plist
+    │           │   ├── VirtualSMC.kext
+    │           │   │   └── Contents
+    │           │   │       ├── Info.plist
+    │           │   │       └── MacOS
+    │           │   │           └── VirtualSMC
+    │           │   └── WhateverGreen.kext
+    │           │       └── Contents
+    │           │           ├── Info.plist
+    │           │           └── MacOS
+    │           │               └── WhateverGreen
+    │           ├── OpenCore.efi
+    │           ├── Resources
+    │           │   ├── Audio
+    │           │   ├── Font
+    │           │   ├── Image
+    │           │   └── Label
+    │           ├── Tools
+    │           │   └── OpenShell.efi
+    │           └── config.plist
     └── screenshots
-        └──...
+        └── EasyUEFI.png
 
 **EFI: base files for booting from USB**
 
@@ -187,29 +217,26 @@ https://github.com/khronokernel/IORegistryClone/blob/master/ioreg-302.zip
 ## KEXTS 📦
 
 **SOUND**
-https://github.com/acidanthera/AppleALC
-
-- AppleALC.kext
+- https://github.com/acidanthera/AppleALC
+  - AppleALC.kext
 
 **BLUETOOTH**
-https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases
+- https://github.com/acidanthera/BrcmPatchRAM/releases
 
-- IntelBluetoothFirmware.kext
-- IntelBTPatcher.kext
+  - BlueToolFixup.kext
+- https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases
+  - IntelBluetoothFirmware.kext
+  - IntelBTPatcher.kext
 
 **WIFI**
-https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0
-
-- itlwm.kext
+- https://github.com/OpenIntelWireless/itlwm/releases (AirportItlwm_v2.2.0_stable_Ventura)
+  - AirportItlwm.kext
 
 **SENSORS / TEMPERATURE**
-https://github.com/Acidanthera/VirtualSMC/releases/tag/1.3.2
-
-- SMCProcessor.kext
-- SMCSuperIO.kext
+- https://github.com/Acidanthera/VirtualSMC/releases/tag/1.3.2
+  - SMCProcessor.kext
+  - SMCSuperIO.kext
 
 ## APPLICATIONS 👨🏻‍💻
-
-**WIFI:** https://github.com/OpenIntelWireless/HeliPort/releases
 
 **MONITOR CONTROL:** https://github.com/MonitorControl/MonitorControl/releases
